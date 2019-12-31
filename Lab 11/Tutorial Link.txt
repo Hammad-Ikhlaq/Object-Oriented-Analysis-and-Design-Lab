@@ -1,0 +1,13 @@
+NetBeans Tutorial Link:
+
+Tutorial Links:
+ 
+https://youtu.be/HLx1ySEVAgQ
+ 
+https://youtu.be/c7RZV4VLv3s
+
+https://netbeans.org/kb/docs/ide/java-db.html
+
+
+My SQL Link: 
+http://www.ntu.edu.sg/home/ehchua/programming/sql/MySQL_HowTo.html
