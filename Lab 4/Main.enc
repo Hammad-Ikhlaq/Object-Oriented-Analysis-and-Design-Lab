@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package Task1;
+import java.util.*;
+/**
+ *
+ * @author l164304
+ */
+public class Main {
+
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Player[] myTeam=new Player[11];
+        Batsman bat1=new Batsman("Fakhar Zaman",200,5000,21,12);
+        myTeam[0]=bat1;
+        Batsman bat2=new Batsman("Imam Ul Haq",102,2500,5,12);
+        myTeam[1]=bat2; 
+        Batsman bat3=new Batsman("Babar Azam",300,7200,32,45);
+        myTeam[2]=bat3;
+        Batsman bat4=new Batsman("Shoab Malik",512,15000,45,60);
+        myTeam[3]=bat4;
+        Batsman bat5=new Batsman("Faheem Ashraf",212,1500,5,60);
+        myTeam[4]=bat5;
+        Batsman bat6=new Batsman("Shadab Khan",250,1200,2,8);
+        myTeam[5]=bat6;
+        WicketKeeper wk1=new WicketKeeper("Sarfaraz Ahmed",450,6000,250,150);
+        myTeam[6]=wk1;
+        Bowler ball1=new Bowler("Mohammad Aamir",405,800,602,15);
+        myTeam[7]=ball1;
+        Bowler ball2=new Bowler("Hasan Ali",300,256,518,20);
+        myTeam[8]=ball2;
+        Bowler ball3=new Bowler("Shaheen Shah Afridi",50,59,35,2);
+        myTeam[9]=ball3;
+        Bowler ball4=new Bowler("Usman Shinwari",202,156,459,20);
+        myTeam[10]=ball4;
+        for(int i=0;i<11;i++){
+            System.out.println(myTeam[i].print());
+            System.out.println(myTeam[i].catagory());
+            System.out.println("                        ==============");
+        }
+        
+    }
+
+    
+    
+}

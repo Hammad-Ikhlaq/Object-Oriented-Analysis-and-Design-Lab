@@ -1,0 +1,4 @@
+
+insert into candy (candyId,candyName,quantity,price) values('2','aa','12','121');
+UPDATE candy SET price= '100' WHERE candyName= aa;
+DELETE FROM candy WHERE candyName= aa;

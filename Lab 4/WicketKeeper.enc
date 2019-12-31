@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Task1;
+
+/**
+ *
+ * @author LENOVO
+ */
+public class WicketKeeper extends Player {
+    int catches;
+    int stumps;
+    WicketKeeper(){
+        super();
+        catches=stumps=0;
+    }
+    WicketKeeper(String name,int matchesPlayed,int runsScored,int catches,int stumps){
+        super(name,matchesPlayed,runsScored);
+        this.catches=catches;
+        this.stumps=stumps;
+    }
+    String print(){
+        return("\n"+super.print()+"CatchesTaken: "+catches+"\nNumber of Stumps: "+stumps);
+    }
+    @Override
+    String catagory(){
+        if(catches>=200&&stumps>=100)
+            return ("A Strong Wicket Keeper");
+        else
+            return ("Not a Strong Wicket Keeper");
+    }
+}

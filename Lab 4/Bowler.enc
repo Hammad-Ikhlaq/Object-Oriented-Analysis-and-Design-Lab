@@ -1,0 +1,44 @@
+package Task2;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import Task2.*;
+
+/**
+ *
+ * @author LENOVO
+ */
+public class Bowler extends Player implements AllRounder{
+    int wicketsTaken;
+    int fiveWicketsHauls;
+    Bowler(){
+        super();
+        wicketsTaken=fiveWicketsHauls=0;
+    }
+    Bowler(String name,int matchesPlayed,int runsScored,int wicketsTaken,int fiveWicketsHauls){
+        super(name,matchesPlayed,runsScored);
+        this.wicketsTaken=wicketsTaken;
+        this.fiveWicketsHauls=fiveWicketsHauls;
+    }
+    String print(){
+        return("\n"+super.print()+"Wickets Taken: "+wicketsTaken+"\nFive Wickets Hauls: "+fiveWicketsHauls);
+    }
+    @Override
+    String catagory(){
+        if(wicketsTaken>=400&&fiveWicketsHauls>=10)
+            return ("\nA Strong Bowler");
+        else
+            return ("Not a Strong Bowler");
+    }
+    @Override
+    public boolean checkAllrounderStatus(){
+        if(wicketsTaken>=400&&fiveWicketsHauls>=10)
+            return true;
+        else
+            return false;
+    }
+}

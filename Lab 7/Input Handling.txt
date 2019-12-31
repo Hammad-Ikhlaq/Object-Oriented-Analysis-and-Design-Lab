@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package example;
+import java.util.*;
+import java.io.*;
+/**
+ *
+ * @author Farwa
+ */
+public class MY_DB 
+{
+     //List<Medicine> list_of_med;
+    //int count_of_med
+    
+    boolean read_file(String fileName) throws IOException 
+    {
+        //function is incomple , store data in list
+        //path of file is:
+        //C:\Users\Farwa\Documents\NetBeansProjects\ProjectName
+        
+        boolean flag = true;
+        FileReader fr=null; 
+        int ch; 
+        try
+        { 
+            fr = new FileReader(fileName); 
+        } 
+        catch (FileNotFoundException fe) 
+        { 
+            System.out.println("File not found"); 
+            return false;
+        } 
+        char []cbuf = new char[100];
+        // read from FileReader till the end of file line by line , you can change it to char by char
+        while ((ch=fr.read(cbuf))!=-1) //ch = fr.read() , read a single character, ch has its asci
+            
+            System.out.print(cbuf);  //  System.out.print((char)ch); 
+  
+        // close the file 
+        fr.close(); 
+        return flag;
+    }
+    boolean Comit_Data() throws IOException 
+    {
+        boolean flag = true;
+     // Accept a string 
+        String str = "\nI have updated \n the file";
+  
+        // attach a file to FileWriter 
+        FileWriter fw=new FileWriter("med_DB.txt"); 
+  
+        // read character wise from string and write 
+        // into FileWriter 
+        for (int i = 0; i < str.length(); i++) 
+            fw.write(str.charAt(i)); 
+  
+        //close the file 
+        fw.close();    
+        return flag;
+    }
+    //remove that main when UI is created
+    public static void main(String args[]) 
+    {
+        
+        MY_DB my = new MY_DB();
+        try
+        {
+            my.read_file("med_DB.txt");
+            my.Comit_Data();
+            my.read_file("med_DB.txt");
+        }
+        catch (Exception e) 
+        { 
+            System.out.println("Error"); 
+        
+        } 
+    }
+
+}

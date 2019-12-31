@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package Task1;
+
+/**
+ *
+ * @author LENOVO
+ */
+public class Batsman extends Player{
+    int centuries;
+    int halfCenturies;
+    Batsman(){
+        super();
+        centuries=halfCenturies=0;
+    }
+    Batsman(String name,int matchesPlayed,int runsScored,int centuries,int halfCenturies){
+        super(name,matchesPlayed,runsScored);
+        this.centuries=centuries;
+        this.halfCenturies=halfCenturies;
+    }
+    String print(){
+        return("\n"+super.print()+"Centuries Scored: "+centuries+"\nHalf Centuries Scored: "+halfCenturies);
+    }
+    @Override
+    String catagory(){
+        if(centuries>=20&&halfCenturies>=10)
+            return ("A Strong Batsman");
+        else
+            return ("Not a Strong Batsman");
+    }
+}
